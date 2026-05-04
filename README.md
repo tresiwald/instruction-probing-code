@@ -1,11 +1,17 @@
-# Instructions Shape Language Production, Not Processing
+<p align="center">
+  <img src="assets/logo.png" alt="Instructions Shape Language Production logo" width="140">
+</p>
+
+<p align="center">
+  <img src="assets/readme-header.svg" alt="Instructions Shape Production of Language, not Processing" width="900">
+</p>
 
 Code and data for the paper *Instructions Shape Language Production, Not Processing*.
 
 This project studies a narrow but important question: when instructions affect model behavior, where does that effect live? The repository is organized around a simple experimental pipeline:
 
-1. encode hidden representations for instruction-conditioned task examples
-2. probe those representations with a classifier-based probing backend
+1. dump task representations for instruction-conditioned task examples
+2. probe those dumped representations with a classifier-based probing backend
 
 ## Overview
 
@@ -70,7 +76,7 @@ If you do not need experiment tracking, nothing else is required: the default jo
 
 ## Run The Pipeline
 
-### 1. Encode Activations
+### 1. Encode Tasks
 
 The encoding job script runs the main prompt variants used in the paper for a comma-separated task list:
 
@@ -90,11 +96,11 @@ Arguments:
 - `precision`: `full`, `half`, or `four_bit`.
 - `encoding_batch_size` (optional): batch size for the `k=4` runs. Default: `2`.
 
-Encoded activations are written to `encodings/`.
+Dumped task representations are written to `encodings/`.
 
-### 2. Probe Representations
+### 2. Probe Tasks
 
-The probing job reads those saved activations and runs linear probes through the bundled probing backend:
+The probing job reads those dumped task representations and runs linear probes through the bundled probing backend:
 
 ```bash
 bash src/jobs/probe_base.bash \
