@@ -6,6 +6,11 @@
   <img src="assets/readme-header.svg" alt="Instructions Shape Production of Language, not Processing" width="900">
 </p>
 
+<h1 align="center">
+  Instructions Shape <i>Production</i> of Language,<br>
+  not <del><i>Processing</i></del>
+</h1>
+
 Code and data for the paper *Instructions Shape Language Production, Not Processing*.
 
 This project studies a narrow but important question: when instructions affect model behavior, where does that effect live? The repository is organized around a simple experimental pipeline:
