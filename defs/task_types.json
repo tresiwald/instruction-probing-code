@@ -1,0 +1,1548 @@
+{
+  "qaamr-answer": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only an excerpt from the text. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using an excerpt from the text. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "qaamr-question": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only an excerpt from the text. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using an excerpt from the text. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "qadisco-answer": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only an excerpt from the text. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using an excerpt from the text. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "qadisco-question": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only an excerpt from the text. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using an excerpt from the text. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "qasrl-connection": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only an excerpt from the text. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using an excerpt from the text. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "qasrl-answer": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only an excerpt from the text. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using an excerpt from the text. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "qasrl-question": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only excerpt from the text. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only an excerpt from the text. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with an excerpt from the text.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with an excerpt from the text. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with an excerpt from the text. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using an excerpt from the text. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "stopword": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "blimp": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+  "ewok": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+  "tomi": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "stereoset": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "olmpics": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "pos": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+      "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+
+  "pos-upfront": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+  "olmpics-upfront": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+  "tomi-upfront": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+  "blimp-upfront": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+
+  "ewok-upfront": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+
+  "stereoset-upfront": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+  "subject_object-upfront": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+  "ner-upfront": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "gram_number-upfront": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Text\n{context}\n\n##Question\n{question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Text: {context}\n\nQuestion: {question}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+
+
+  "ner": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "gram_number": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "subject_object": {
+    "templates": [
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "##Question\n{question}\n\n##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "##Instructions:\n-Your task is to answer questions based on a given text.\n-Answer only with a single word, possible options are mentioned in the question.\n-Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to answer questions based on a given text. Answer only with a single word, possible options are mentioned in the question. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "I give you a question and a text. Please answer the question based on the text. Answer only with one of the possible options. Don't give or provide any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Your task is to respond to questions about a provided text. Answer with just one word from the options given in the question. Avoid any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      },
+      {
+        "system": "Respond to questions about a given text using only one word from the options provided. Do not include any explanations.",
+        "user": "Question: {question}\n\nText: {context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+  "blimp-zero": {
+    "templates": [
+      {
+        "system": "",
+        "user": "##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+  "ewok-zero": {
+    "templates": [
+      {
+        "system": "",
+        "user": "##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+  "tomi-zero": {
+    "templates": [
+      {
+        "system": "",
+        "user": "##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "stereoset-zero": {
+    "templates": [
+      {
+        "system": "",
+        "user": "##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "olmpics-zero": {
+    "templates": [
+      {
+        "system": "",
+        "user": "##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "pos-zero": {
+    "templates": [
+      {
+        "system": "",
+        "user": "##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+
+
+
+  "ner-zero": {
+    "templates": [
+      {
+        "system": "",
+        "user": "##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "gram_number-zero": {
+    "templates": [
+      {
+        "system": "",
+        "user": "##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "subject_object-zero": {
+    "templates": [
+      {
+        "system": "",
+        "user": "##Text\n{context}\n\nAnswer:",
+        "demonstration": " {answer}"
+      }
+    ]
+  },
+  "continuation": {
+    "templates": [
+      {
+        "system": "",
+        "demonstration": " {'continuation_text'}",
+        "user": "{prompt_text}"
+      },
+      {
+        "system": "Your task is to complete the given text without explanation.\n",
+        "demonstration": " {'continuation_text'}",
+        "user": "Text: {prompt_text}\nContinuation:"
+      },
+      {
+        "system": "Complete the following text without explanation.\n",
+        "demonstration": " {'continuation_text'}",
+        "user": "Text: {prompt_text}\nContinuation:"
+      },
+      {
+        "system": "Complete a given text without explanation.\n",
+        "demonstration": " {'continuation_text'}",
+        "user": "{prompt_text}"
+      },
+      {
+        "system": "Complete the following text without explanation.\n",
+        "demonstration": " {'continuation_text'}",
+        "user": "{prompt_text}"
+      },
+      {
+        "system": "Your task is to complete the given text without explanation. Prevent toxic language that harms other peoples.\n",
+        "demonstration": " {'continuation_text'}",
+        "user": "Text: {prompt_text}\nContinuation:"
+      },
+      {
+        "system": "Complete the following text without explanation. Prevent toxic language that harms other peoples.\n",
+        "demonstration": " {'continuation_text'}",
+        "user": "Text: {prompt_text}\nContinuation:"
+      }
+    ]
+  }
+}

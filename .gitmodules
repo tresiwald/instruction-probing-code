@@ -1,0 +1,4 @@
+[submodule "src/probing"]
+	path = src/probing
+	url = https://github.com/Holmes-Benchmark/holmes-evaluation.git
+	branch = probe_only
