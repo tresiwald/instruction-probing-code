@@ -263,16 +263,12 @@ class QuestionAnswerEncoder(TaskEncoder):
 
         return score_batch_elements
 
-    def get_input_instruction_hidden_state(self, input_hidden_states, attention_caches, encoded_batch, batch_frame, relevant_samples, tokenizer):
-        """Aggregate input-side representations for spans, instructions, and projection states."""
+    def get_sample_output_hidden_state(self, input_hidden_states, attention_caches, encoded_batch, batch_frame, relevant_samples, tokenizer):
+        """Aggregate the two retained internal dump types: sample and output states."""
         aggregated_attention_caches = {key: torch.concat(values, dim=1) for key, values in attention_caches.items()}
 
-        input_encodings = []
-        k_state_encodings = []
-        q_state_encodings = []
-        v_state_encodings = []
-        o_state_encodings = []
-        instruction_encodings = []
+        sample_encodings = []
+        output_encodings = []
 
         for hidden_states, (i, batch_element) in zip(input_hidden_states, batch_frame.iterrows()):
             filtered_samples = relevant_samples[relevant_samples["instance_id"] == batch_element["instance_id"]]
@@ -295,18 +291,6 @@ class QuestionAnswerEncoder(TaskEncoder):
 
                     spans_token_indices.append(list(sorted(set(indices))))
 
-                all_indices = (encoded_batch["attention_mask"][i] == 1).nonzero(as_tuple=True)[0].detach().cpu()
-
-                input_relevant_indices = torch.tensor(sorted([
-                    token_index
-                    for token_index in set([char_to_token_wrapper(encoded_batch, i, char_index) for char_index in range(start_input_index, end_input_index + 1)])
-                    if token_index is not None
-                ])).detach().cpu()
-
-                instruction_relevant_indices = all_indices[~all_indices.unsqueeze(1).eq(input_relevant_indices).any(1)]
-
-                instruction_hidden_state = hidden_states[:,instruction_relevant_indices].mean(dim=1).detach().cpu()
-
                 spans_hidden_states = [
                     hidden_states[:,span_token_indices].mean(dim=1).detach().cpu()
                     for span_token_indices in spans_token_indices
@@ -318,41 +302,16 @@ class QuestionAnswerEncoder(TaskEncoder):
                     row["layer"] = layer
 
                     if layer > 0:
-                        q_layer_states = aggregated_attention_caches[f"q_layer-{layer}"][i].mean(dim=0).detach().cpu()
+                        output_layer_states = aggregated_attention_caches[f"o_layer-{layer}"][i].mean(dim=0).detach().cpu()
+                        output_batch_element = row.copy()
+                        output_batch_element["inputs_encoded"] = output_layer_states.numpy()
+                        output_encodings.append(output_batch_element)
 
-                        k_layer_states = aggregated_attention_caches[f"k_layer-{layer}"][i].detach().cpu()
+                    sample_batch_element = row.copy()
+                    sample_batch_element["inputs_encoded"] = spans_hidden_states[layer].numpy()
+                    sample_encodings.append(sample_batch_element)
 
-                        v_layer_states = aggregated_attention_caches[f"v_layer-{layer}"][i].detach().cpu()
-
-                        o_layer_states = aggregated_attention_caches[f"o_layer-{layer}"][i].mean(dim=0).detach().cpu()
-
-                        q_state_batch_element = row.copy()
-                        k_state_batch_element = row.copy()
-                        v_state_batch_element = row.copy()
-                        o_state_batch_element = row.copy()
-
-                        q_state_batch_element["inputs_encoded"] = q_layer_states.numpy()
-                        k_state_batch_element["inputs_encoded"] = k_layer_states.numpy()
-                        v_state_batch_element["inputs_encoded"] = v_layer_states.numpy()
-                        o_state_batch_element["inputs_encoded"] = o_layer_states.numpy()
-
-                        k_state_encodings.append(k_state_batch_element)
-                        q_state_encodings.append(q_state_batch_element)
-                        v_state_encodings.append(v_state_batch_element)
-                        o_state_encodings.append(o_state_batch_element)
-
-                    input_batch_element = row.copy()
-                    instruction_batch_element = row.copy()
-
-
-                    input_batch_element["inputs_encoded"] = spans_hidden_states[layer].numpy()
-                    instruction_batch_element["inputs_encoded"] = instruction_hidden_state[layer].numpy()
-
-                    input_encodings.append(input_batch_element)
-                    instruction_encodings.append(instruction_batch_element)
-
-
-        return input_encodings, instruction_encodings, k_state_encodings, q_state_encodings, v_state_encodings, o_state_encodings
+        return sample_encodings, output_encodings
 
     def get_generated_hidden_state(self, output_hidden_states, encoded_batch, batch_frame, generated_texts, num_return_sequences):
         """Aggregate generation-side hidden states for each produced answer.

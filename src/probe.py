@@ -144,12 +144,10 @@ def get_default_subtask_name(task):
 @click.option('--in_filter', type=str)
 @click.option('--probe_type', type=str, default="linear")
 @click.option('--limit', type=int)
-@click.option('--probe_attention', is_flag=True, default=False)
 def main(
         task, model_name, chat_template_model_name, model_precision, batch_size, encoding_folder, project_prefix,
         seeds, dump_preds, force_probing, result_folder, cache_folder, probing_labels,
         logging, processing, control_task, template_index, num_hidden_layers, num_return_sequences, questions, in_filter, probe_type, limit,
-        probe_attention
 ):
     """Run linear probes over previously dumped encodings.
 
@@ -177,7 +175,6 @@ def main(
         in_filter: Optional filename filter for encodings.
         probe_type: Probe architecture name.
         limit: Optional row cap per encoding file.
-        probe_attention: Whether to include q/k/v state files.
     """
 
     if chat_template_model_name is None:
@@ -253,27 +250,13 @@ def main(
                 print(f"Using fallback encoding task '{fallback_task}'")
 
         for encoding_file in matching_encoding_files:
-            if not probe_attention and ("k_state" in encoding_file or "v_state" in encoding_file or "q_state" in encoding_file):
-                continue
-
-            if "instruction_" in encoding_file:
-                continue
-
-
-            if f"input_{questions}.feather" in encoding_file:
-                origin = "input"
-            elif "k_state" in encoding_file:
-                origin = "k_state"
-            elif "q_state" in encoding_file:
-                origin = "q_state"
-            elif "v_state" in encoding_file:
-                origin = "v_state"
-            elif "o_state" in encoding_file:
-                origin = "o_state"
+            if f"sample_{questions}.feather" in encoding_file:
+                origin = "sample"
+            elif f"output_{questions}.feather" in encoding_file:
+                origin = "output"
             elif "generation" in encoding_file:
                 origin = "generation"
             else:
-                #origin = "generation"
                 continue
             layer_name = encoding_file.split("/")[-2]
             layer_id = int(layer_name.split("-")[1])

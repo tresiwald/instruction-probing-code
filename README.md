@@ -119,6 +119,134 @@ Optional arguments:
 
 Probe outputs are written to `results/`.
 
+## Extract Results
+
+This repository produces two kinds of outputs:
+
+1. behavioral outputs from model generations
+2. internal outputs from dumped hidden-state representations and probe runs
+
+### Behavioral Outputs
+
+Behavioral generations are stored as Feather files under `encodings/<task>/<model>/<chat_template_model>/<precision>/template-<id>/num-gens1/layer-*/generation_*_<question>.feather`.
+
+For example:
+
+```bash
+encodings/blimp/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/num-gens1/layer-0/generation_0_original.feather
+```
+
+These files contain, among others, the following columns:
+
+- `question`
+- `answer`
+- `generation_text`
+- `layer`
+- `generation_id`
+- `inputs_encoded`
+
+To extract behavioral predictions:
+
+```python
+import pandas as pd
+
+df = pd.read_feather(
+    "encodings/blimp/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/num-gens1/layer-0/generation_0_original.feather"
+)
+
+behavior = df[["question", "answer", "generation_text", "layer", "generation_id"]]
+print(behavior.head())
+```
+
+### Internal Outputs
+
+Internal task representations are stored as Feather files under subtask-specific folders such as `blimp-default`, `olmpics-default`, or intervention variants such as `blimp-default-sep-output-till-quest-right-0`.
+
+The two retained internal files are:
+
+- `sample_<question>.feather`: span-level sample representations
+- `output_<question>.feather`: output projection representations
+
+For example:
+
+```bash
+encodings/blimp-default/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/num-gens1/layer-0/sample_original.feather
+```
+
+These files contain task metadata together with the representation vector in `inputs_encoded`. Typical metadata columns include:
+
+- `task_type`
+- `sub_task`
+- `context`
+- `question`
+- `answer`
+- `label`
+- `layer`
+- `inputs_encoded`
+
+To extract sample-side internal representations:
+
+```python
+import pandas as pd
+
+df = pd.read_feather(
+    "encodings/blimp-default/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/num-gens1/layer-0/sample_original.feather"
+)
+
+internal = df[["context", "question", "answer", "label", "layer", "inputs_encoded"]]
+print(internal.head())
+```
+
+To extract output-side internal representations:
+
+```python
+import pandas as pd
+
+df = pd.read_feather(
+    "encodings/blimp-default/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/num-gens1/layer-1/output_original.feather"
+)
+
+output = df[["context", "question", "answer", "label", "layer", "inputs_encoded"]]
+print(output.head())
+```
+
+### Probe Outputs
+
+Probing results are stored under `results/` and include:
+
+- `metrics.csv`: validation and test metrics
+- `preds.csv`: per-example probe predictions
+- `hparams.yaml`: probe configuration
+- `*.ckpt`: saved probe checkpoints
+
+For example:
+
+```bash
+results/lift-pair-blimp-default/Qwen_Qwen2.5-7B-Instruct/full/NONE/5000/0/0/done/metrics.csv
+```
+
+To extract summary metrics and probe predictions:
+
+```python
+import pandas as pd
+
+metrics = pd.read_csv(
+    "results/lift-pair-blimp-default/Qwen_Qwen2.5-7B-Instruct/full/NONE/5000/0/0/done/metrics.csv"
+)
+preds = pd.read_csv(
+    "results/lift-pair-blimp-default/Qwen_Qwen2.5-7B-Instruct/full/NONE/5000/0/0/done/preds.csv"
+)
+
+print(metrics.tail(1))
+print(preds.head())
+```
+
+In practice:
+
+- use `generation_*.feather` when you want behavioral outputs
+- use `sample_*.feather` and `output_*.feather` when you want internal representations
+- use `metrics.csv` and `preds.csv` under `results/` when you want probe-level internal evaluation results
+
 ## EWOK
 
 `ewok` is available upon request and is therefore not part of the default public release. If you receive access to it, place the file at `tasks/ewok.jsonl` and include `ewok` in the task list passed to the job scripts.

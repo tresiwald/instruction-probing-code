@@ -33,47 +33,11 @@ for word in words:
     grouped_words[len(word)].append(word)
 
 task_options = {
-    "blimp-anaphor_agreement_strict": ['yes', 'no'],
-    "blimp-argument_structure_strict": ['yes', 'no'],
-    "blimp-binding_strict": ['yes', 'no'],
-    "blimp-control_raising_strict": ['yes', 'no'],
-    "blimp-determiner_noun_agreement_strict": ['yes', 'no'],
-    "blimp-ellipsis_strict": ['yes', 'no'],
-    "blimp-filler_gap_dependency_strict": ['yes', 'no'],
-    "blimp-irregular_forms_strict": ['yes', 'no'],
-    "blimp-island_effects_strict": ['yes', 'no'],
-    "blimp-npi_licensing_strict": ['yes', 'no'],
-    "blimp-quantifiers_strict": ['yes', 'no'],
-    "blimp-s-selection_strict": ['yes', 'no'],
-    "blimp-subject_verb_agreement_strict": ['yes', 'no'],
-    "olmpics_strict": ['yes', 'no'],
     "blimp": ['yes', 'no'],
     "ewok": ['yes', 'no'],
     "tomi": ['yes', 'no'],
     "olmpics": ['yes', 'no'],
     "stereoset": ['yes', 'no'],
-    "ewok_strict": ['yes', 'no'],
-    "stereoset_strict": ['yes', 'no'],
-    "pos_strict": ['noun', 'verb', 'adjective', 'pronoun'],
-    "pos_diff_1_strict": ['noun', 'verb', 'adjective', 'pronoun'],
-    "pos_diff_2_strict": ['1', '2', '3', '4'],
-    "pos_diff_3_strict": ['cucumber', 'onion', 'garlic', 'broccoli'],
-    "stop_strict": ['yes', 'no'],
-    "ner_1_strict": [
-        'FAC', 'NORP', 'ORG', 'PERSON', 'GPE', 'LOC', 'PRODUCT',
-        'EVENT', 'WORK_OF_ART', 'LAW', 'LANGUAGE', 'DATE', 'TIME',
-        'PERCENT', 'MONEY', 'QUANTITY', 'ORDINAL', 'CARDINAL'
-    ],
-    "ner_2_strict": [
-        'FAC', 'NORP', 'ORG', 'PERSON', 'GPE', 'LOC', 'PRODUCT',
-        'EVENT', 'WORK_OF_ART', 'LAW', 'LANGUAGE', 'DATE', 'TIME',
-        'PERCENT', 'MONEY', 'QUANTITY', 'ORDINAL', 'CARDINAL'
-    ],
-    "pos_yn_strict": ['yes', 'no'],
-    "subject_object_yn_strict": ['yes', 'no'],
-    "gram_number_yn_strict": ['yes', 'no'],
-    "subject_object_strict": ['subject', 'object'],
-    "gram_number_strict": ['singular', 'plural'],
 }
 
 
@@ -144,17 +108,7 @@ def insert_cheat(task, row):
     question = row["question"]
     span = row["spans"][0][0]
 
-    if task == "pos_strict":
-        cheat_text = f"The part of speech of '{span}' is {answer}. {question}"
-    elif task == "gram_number_strict":
-        cheat_text = f"The grammatical number of '{span}' is {answer}. {question}"
-    elif task == "subject_object_strict":
-        cheat_text = f"'{span}' is a {answer}. {question}"
-    elif task == "stop_strict" and answer == "no":
-        cheat_text = f"'{span}' is not a stopword. {question}"
-    elif task == "stop_strict" and answer == "yes":
-        cheat_text = f"'{span}' is a stopword. {question}"
-    elif task == "blimp" and answer == "yes":
+    if task == "blimp" and answer == "yes":
         cheat_text = f"'{span}' is grammatically acceptable. {question}"
     elif task == "blimp" and answer == "no":
         cheat_text = f"'{span}' is grammatically not acceptable. {question}"
@@ -196,17 +150,7 @@ def insert_distribution(task, row):
     question = row["question"]
     span = row["spans"][0][0]
 
-    if task == "pos_strict":
-        disturb_text = f"The part of speech of '{span}' is {other_answer}. {question}"
-    elif task == "gram_number_strict":
-        disturb_text = f"The grammatical number of '{span}' is {other_answer}. {question}"
-    elif task == "subject_object_strict":
-        disturb_text = f"'{span}' is a {other_answer}. {question}"
-    elif task == "stop_strict" and other_answer == "no":
-        disturb_text = f"'{span}' is not a stopword. {question}"
-    elif task == "stop_strict" and other_answer == "yes":
-        disturb_text = f"'{span}' is a stopword. {question}"
-    elif task == "blimp" and answer == "no":
+    if task == "blimp" and answer == "no":
         disturb_text = f"'{span}' is grammatically acceptable. {question}"
     elif task == "blimp" and answer == "yes":
         disturb_text = f"'{span}' is grammatically not acceptable. {question}"
@@ -554,18 +498,13 @@ def main(
         dataset = Dataset.from_pandas(distinct_samples[["element_id", "instance_id", "sub_task", "question", "answer",
                                                         "compiled_instruction_text"]])
 
-        input_encodings = []
-
-        k_state_encodings = []
-        q_state_encodings = []
-        v_state_encodings = []
-        o_state_encodings = []
+        sample_encodings = []
+        output_encodings = []
 
         #attentions_encodings = []
 
         logit_scores = []
 
-        instruction_encodings = []
         generated_encodings = []
 
         pbar = tqdm(dataset.iter(batch_size=encoding_batch_size))
@@ -626,19 +565,6 @@ def main(
             })
 
             attention_cache = defaultdict(list)
-
-            def save_span_vector(name, all_token_span_indices):
-                """Capture mean span activations from projection outputs."""
-                def hook(model, input, output):
-                    if name not in attention_cache:
-                        entry = torch.stack([
-                            torch.concat([
-                                output[i][span_indices].mean(dim=0) for span_indices in token_span_indices
-                            ], dim=0) for i, token_span_indices in enumerate(all_token_span_indices)
-                        ])
-                        attention_cache[name].append(entry)
-
-                return hook
 
             def save_generation_vector(name):
                 """Capture projection outputs for generated tokens only."""
@@ -783,15 +709,8 @@ def main(
 
             for i, layer in enumerate(layers):
 
-                layer.self_attn.k_proj._forward_hooks = OrderedDict()
-                layer.self_attn.q_proj._forward_hooks = OrderedDict()
-                layer.self_attn.v_proj._forward_hooks = OrderedDict()
                 layer.self_attn.o_proj._forward_hooks = OrderedDict()
 
-
-                layer.self_attn.k_proj.register_forward_hook(save_span_vector(f"k_layer-{i + 1}", all_token_span_indices))
-                layer.self_attn.q_proj.register_forward_hook(save_generation_vector(f"q_layer-{i + 1}"))
-                layer.self_attn.v_proj.register_forward_hook(save_span_vector(f"v_layer-{i + 1}", all_token_span_indices))
                 layer.self_attn.o_proj.register_forward_hook(save_generation_vector(f"o_layer-{i + 1}"))
 
                 layer.self_attn.forward = forward_wrap(layer.self_attn.forward, layer_index=i)
@@ -815,7 +734,7 @@ def main(
 
             output_hidden_states = extract_output_hidden_state(generation)
 
-            input_encoding, instruction_encoding, k_state_encoding, q_state_encoding, v_state_encoding, o_state_encoding = encoder.get_input_instruction_hidden_state(
+            sample_encoding, output_encoding = encoder.get_sample_output_hidden_state(
                 input_hidden_states, attention_cache, encoded_batch, batch_frame, relevant_samples, tokenizer
             )
 
@@ -831,13 +750,8 @@ def main(
             #attentions_encodings.extend(attention_elements)
             logit_scores.extend(score_elements)
 
-            k_state_encodings.extend(k_state_encoding)
-            q_state_encodings.extend(q_state_encoding)
-            v_state_encodings.extend(v_state_encoding)
-            o_state_encodings.extend(o_state_encoding)
-
-            input_encodings.extend(input_encoding)
-            instruction_encodings.extend(instruction_encoding)
+            output_encodings.extend(output_encoding)
+            sample_encodings.extend(sample_encoding)
 
             generated_encodings.extend(
                 encoder.get_generated_hidden_state(
@@ -845,27 +759,17 @@ def main(
                 )
             )
 
-        k_state_frame = pandas.DataFrame(k_state_encodings).reset_index(drop=True)
-        q_state_frame = pandas.DataFrame(q_state_encodings).reset_index(drop=True)
-        v_state_frame = pandas.DataFrame(v_state_encodings).reset_index(drop=True)
-        o_state_frame = pandas.DataFrame(o_state_encodings).reset_index(drop=True)
-        #attention_frame = pandas.DataFrame(attentions_encodings).reset_index(drop=True)
         logit_score_frame = pandas.DataFrame(logit_scores).reset_index(drop=True)
-        input_encoding_frame = pandas.DataFrame(input_encodings).reset_index(drop=True)
-        instruction_encoding_frame = pandas.DataFrame(instruction_encodings).reset_index(drop=True)
+        sample_encoding_frame = pandas.DataFrame(sample_encodings).reset_index(drop=True)
+        output_encoding_frame = pandas.DataFrame(output_encodings).reset_index(drop=True)
         generated_encoding_frame = pandas.DataFrame(generated_encodings).reset_index(drop=True)
 
         if behavior_only:
-            del k_state_frame["inputs_encoded"]
-            del q_state_frame["inputs_encoded"]
-            del v_state_frame["inputs_encoded"]
-            del o_state_frame["inputs_encoded"]
-            del input_encoding_frame["inputs_encoded"]
-            del instruction_encoding_frame["inputs_encoded"]
+            del output_encoding_frame["inputs_encoded"]
+            del sample_encoding_frame["inputs_encoded"]
             del generated_encoding_frame["inputs_encoded"]
 
-        for frame in [input_encoding_frame, instruction_encoding_frame, generated_encoding_frame, k_state_frame,
-                      q_state_frame, v_state_frame, o_state_frame, logit_score_frame]:
+        for frame in [sample_encoding_frame, output_encoding_frame, generated_encoding_frame, logit_score_frame]:
             if "instructions" in frame:
                 del frame["instructions"]
 
@@ -873,21 +777,11 @@ def main(
                 if "level" in col:
                     del frame[col]
 
-        k_state_frame["spans"] = k_state_frame["spans"].apply(
-            lambda spans: "_".join([f"{span[0]},{span[1]},{span[2]}" for span in spans]))
-        q_state_frame["spans"] = q_state_frame["spans"].apply(
-            lambda spans: "_".join([f"{span[0]},{span[1]},{span[2]}" for span in spans]))
-        v_state_frame["spans"] = v_state_frame["spans"].apply(
-            lambda spans: "_".join([f"{span[0]},{span[1]},{span[2]}" for span in spans]))
-        o_state_frame["spans"] = o_state_frame["spans"].apply(
-            lambda spans: "_".join([f"{span[0]},{span[1]},{span[2]}" for span in spans]))
-        #attention_frame["spans"] = attention_frame["spans"].apply(
-        #    lambda spans: "_".join([f"{span[0]},{span[1]},{span[2]}" for span in spans]))
         logit_score_frame["spans"] = logit_score_frame["spans"].apply(
             lambda spans: "_".join([f"{span[0]},{span[1]},{span[2]}" for span in spans]))
-        input_encoding_frame["spans"] = input_encoding_frame["spans"].apply(
+        sample_encoding_frame["spans"] = sample_encoding_frame["spans"].apply(
             lambda spans: "_".join([f"{span[0]},{span[1]},{span[2]}" for span in spans]))
-        instruction_encoding_frame["spans"] = instruction_encoding_frame["spans"].apply(
+        output_encoding_frame["spans"] = output_encoding_frame["spans"].apply(
             lambda spans: "_".join([f"{span[0]},{span[1]},{span[2]}" for span in spans]))
 
         #for (sub_task, layer), layer_frame in attention_frame.groupby(["sub_task", "layer"]):
@@ -904,47 +798,19 @@ def main(
         #    layer_frame[relevant_columns].reset_index().to_feather(
         #        f"{sub_task_folder}/layer-0/scores_{questions}.feather")
 
-        for (sub_task, layer), layer_frame in input_encoding_frame.groupby(["sub_task", "layer"]):
+        for (sub_task, layer), layer_frame in sample_encoding_frame.groupby(["sub_task", "layer"]):
             sub_task_folder = encoding_folder_structure.replace(task, f'{task}-{sub_task}')
             os.makedirs(f"{sub_task_folder}/layer-{layer}", exist_ok=True)
             relevant_columns = [col for col in layer_frame.columns if "__" not in col]
             layer_frame[relevant_columns].reset_index().to_feather(
-                f"{sub_task_folder}/layer-{layer}/input_{output_question_name}.feather")
+                f"{sub_task_folder}/layer-{layer}/sample_{output_question_name}.feather")
 
-        for (sub_task, layer), layer_frame in q_state_frame.groupby(["sub_task", "layer"]):
+        for (sub_task, layer), layer_frame in output_encoding_frame.groupby(["sub_task", "layer"]):
             sub_task_folder = encoding_folder_structure.replace(task, f'{task}-{sub_task}')
             os.makedirs(f"{sub_task_folder}/layer-{layer}", exist_ok=True)
             relevant_columns = [col for col in layer_frame.columns if "__" not in col]
             layer_frame[relevant_columns].reset_index().to_feather(
-                f"{sub_task_folder}/layer-{layer}/q_state_{output_question_name}.feather")
-
-        for (sub_task, layer), layer_frame in v_state_frame.groupby(["sub_task", "layer"]):
-            sub_task_folder = encoding_folder_structure.replace(task, f'{task}-{sub_task}')
-            os.makedirs(f"{sub_task_folder}/layer-{layer}", exist_ok=True)
-            relevant_columns = [col for col in layer_frame.columns if "__" not in col]
-            layer_frame[relevant_columns].reset_index().to_feather(
-                f"{sub_task_folder}/layer-{layer}/v_state_{output_question_name}.feather")
-
-        for (sub_task, layer), layer_frame in o_state_frame.groupby(["sub_task", "layer"]):
-            sub_task_folder = encoding_folder_structure.replace(task, f'{task}-{sub_task}')
-            os.makedirs(f"{sub_task_folder}/layer-{layer}", exist_ok=True)
-            relevant_columns = [col for col in layer_frame.columns if "__" not in col]
-            layer_frame[relevant_columns].reset_index().to_feather(
-                f"{sub_task_folder}/layer-{layer}/o_state_{output_question_name}.feather")
-
-        for (sub_task, layer), layer_frame in k_state_frame.groupby(["sub_task", "layer"]):
-            sub_task_folder = encoding_folder_structure.replace(task, f'{task}-{sub_task}')
-            os.makedirs(f"{sub_task_folder}/layer-{layer}", exist_ok=True)
-            relevant_columns = [col for col in layer_frame.columns if "__" not in col]
-            layer_frame[relevant_columns].reset_index().to_feather(
-                f"{sub_task_folder}/layer-{layer}/k_state_{output_question_name}.feather")
-
-        for (sub_task, layer), layer_frame in instruction_encoding_frame.groupby(["sub_task", "layer"]):
-            sub_task_folder = encoding_folder_structure.replace(task, f'{task}-{sub_task}')
-            os.makedirs(f"{sub_task_folder}/layer-{layer}", exist_ok=True)
-            relevant_columns = [col for col in layer_frame.columns if "__" not in col]
-            layer_frame[relevant_columns].reset_index().to_feather(
-                f"{sub_task_folder}/layer-{layer}/instruction_{output_question_name}.feather")
+                f"{sub_task_folder}/layer-{layer}/output_{output_question_name}.feather")
 
         for (generation_id, layer), layer_frame in generated_encoding_frame.groupby(["generation_id", "layer"]):
             generation_id = start_generation_id + generation_id
