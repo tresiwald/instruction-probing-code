@@ -8,14 +8,14 @@
 
 > Abstract: Instructions trigger a production-centered mechanism in language models. Through a cognitively inspired lens that separates language processing and production, we reveal this mechanism as an asymmetry between the two stages by probing task-specific information layer-wise across five binary judgment tasks. Specifically, we measure how instruction tokens shape information both when sample tokens, the input under evaluation, are processed and when output tokens are produced. Across prompting variations, task-specific information in sample tokens stays largely stable and correlates only weakly with behavior, whereas the same information in output tokens varies substantially and correlates strongly. Attention-based interventions confirm this pattern causally: blocking instruction flow to all subsequent tokens reduces both behavior and information in output tokens, whereas blocking it only to sample tokens has minimal effect on either. The asymmetry generalizes across model families and tasks, and sharpens with model scale and instruction-tuning, both of which disproportionately affect the production stage. Our findings suggest that understanding model capabilities requires both jointly assessing internals and behavior, and decomposing the internal perspective by token position to separate the processing of input tokens from the production of output tokens.
 
-If you encounter an issue, something is broken, or if you have further questions, either [email us](mailto:andreas.waldis@live.com) or open an issue [here](https://github.com/instruction-probing/instruction-probing/issues).
-
 Code and data for the paper *Instructions Shape Language Production, Not Processing*.
 
 This project studies a narrow but important question: when instructions affect model behavior, where does that effect live? The repository is organized around a simple experimental pipeline:
 
 1. dump task representations for instruction-conditioned task examples
 2. probe those dumped representations with a classifier-based probing backend
+
+If you encounter an issue, something is broken, or if you have further questions, either [email us](mailto:andreas.waldis@live.com) or open an issue [here](https://github.com/instruction-probing/instruction-probing/issues).
 
 ## Overview
 
