@@ -2,10 +2,6 @@
   <img src="assets/logo.png" alt="Instructions Shape Language Production logo" width="140">
 </p>
 
-<p align="center">
-  <img src="assets/readme-header.svg" alt="Instructions Shape Production of Language, not Processing" width="900">
-</p>
-
 <h1 align="center">
   Instructions Shape <i><span style="color: #f08000;">Production</span></i> of Language,<br>
   not <del><i><span style="color: #00a0a8;">Processing</span></i></del>
