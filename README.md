@@ -99,7 +99,6 @@ Arguments:
 - `tasks`: comma-separated task names.
 - `device`: CUDA device string, for example `0` or `0,1`. Use `cpu` for CPU runs.
 - `precision`: `full`, `half`, or `four_bit`.
-- `encoding_batch_size` (optional): batch size for the `k=4` runs. Default: `2`.
 
 Dumped task representations are written to `encodings/`.
 
