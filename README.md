@@ -7,8 +7,8 @@
 </p>
 
 <h1 align="center">
-  Instructions Shape <i>Production</i> of Language,<br>
-  not <del><i>Processing</i></del>
+  Instructions Shape <i><span style="color: #f08000;">Production</span></i> of Language,<br>
+  not <del><i><span style="color: #00a0a8;">Processing</span></i></del>
 </h1>
 
 Code and data for the paper *Instructions Shape Language Production, Not Processing*.
