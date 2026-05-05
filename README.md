@@ -7,6 +7,10 @@
   not <del><i><span style="color: #00a0a8;">Processing</span></i></del>
 </h1>
 
+<p align="center">
+  <a href="https://instruction-probing.github.io/">Project Page</a>
+</p>
+
 Code and data for the paper *Instructions Shape Language Production, Not Processing*.
 
 This project studies a narrow but important question: when instructions affect model behavior, where does that effect live? The repository is organized around a simple experimental pipeline:
