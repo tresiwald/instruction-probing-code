@@ -241,7 +241,6 @@ def replace_wrong(row, task):
 @click.option('--questions', type=str, default="original")
 @click.option('--template_index', type=str, default=0)
 @click.option('--seed', type=int, default=0)
-@click.option('--start_generation_id', type=int, default=0)
 @click.option('--max_new_tokens', type=int, default=20)
 @click.option('--k', type=int, default=0)
 @click.option('--skip_layers', type=str)
@@ -261,7 +260,7 @@ def replace_wrong(row, task):
 def main(
         task, model_name, chat_template_model_name, model_architecture, model_precision, encoding_batch_size,
         force_encoding, encoding_folder,
-        device, questions, template_index, seed, start_generation_id, max_new_tokens, k, skip_layers, upfront, zero, behavior_only,
+        device, questions, template_index, seed, max_new_tokens, k, skip_layers, upfront, zero, behavior_only,
         attention_limitation_layer_to, attention_limitation_layer_from, attention_limitation_layer_window, attention_limitation_special,
         attention_limitation_special_all,
         attention_limitation_question_only, attention_limitation_question_right,
@@ -282,7 +281,6 @@ def main(
         questions: Prompt variant name.
         template_index: Comma-separated prompt-template indices.
         seed: Random seed.
-        start_generation_id: Offset added to generated sequence ids.
         max_new_tokens: Generation length cap.
         k: Number of demonstrations to include.
         skip_layers: Optional comma-separated transformer layers to bypass.
@@ -501,7 +499,6 @@ def main(
         sample_encodings = []
         output_encodings = []
 
-        #attentions_encodings = []
 
         logit_scores = []
 
@@ -537,9 +534,6 @@ def main(
                 ]
                 for ele_index, ele in enumerate(encoded_batch["input_ids"])
             ]
-            #last_non_special_token = [
-            #    for token_id in encoded_batch["input_ids"]
-            #]
 
             model_encoded_batch = {
                 "input_ids": encoded_batch["input_ids"],
@@ -728,8 +722,6 @@ def main(
                 for final_text, decoded_input_text in zip(final_texts, decoded_batch)
             ]
 
-            #print("\n".join(generated_texts))
-            # Representations are aggregated separately for sample-token spans and generated tokens.
             input_hidden_states = extract_input_hidden_state(generation, 1)
 
             output_hidden_states = extract_output_hidden_state(generation)
@@ -738,16 +730,12 @@ def main(
                 input_hidden_states, attention_cache, encoded_batch, batch_frame, relevant_samples, tokenizer
             )
 
-            #attention_elements = encoder.get_attention(
-            #    generation.attentions, encoded_batch, batch_frame, relevant_samples, tokenizer
-            #)
 
             score_elements = encoder.get_scores(
                 generation.scores, encoded_batch, batch_frame, relevant_samples, tokenizer
             )
 
 
-            #attentions_encodings.extend(attention_elements)
             logit_scores.extend(score_elements)
 
             output_encodings.extend(output_encoding)
@@ -784,19 +772,6 @@ def main(
         output_encoding_frame["spans"] = output_encoding_frame["spans"].apply(
             lambda spans: "_".join([f"{span[0]},{span[1]},{span[2]}" for span in spans]))
 
-        #for (sub_task, layer), layer_frame in attention_frame.groupby(["sub_task", "layer"]):
-        #    sub_task_folder = encoding_folder_structure.replace(task, f'{task}-{sub_task}')
-        #    os.system(f"mkdir -p {sub_task_folder}/layer-{layer}")
-        #    relevant_columns = [col for col in layer_frame.columns if "__" not in col]
-        #    layer_frame[relevant_columns].reset_index().to_feather(
-        #        f"{sub_task_folder}/layer-{layer}/attention_{questions}.feather")
-
-        #for sub_task, layer_frame in logit_score_frame.groupby("sub_task"):
-        #    sub_task_folder = encoding_folder_structure.replace(task, f'{task}-{sub_task}')
-        #    os.system(f"mkdir -p {sub_task_folder}/layer-0")
-        #    relevant_columns = [col for col in layer_frame.columns if "__" not in col]
-        #    layer_frame[relevant_columns].reset_index().to_feather(
-        #        f"{sub_task_folder}/layer-0/scores_{questions}.feather")
 
         for (sub_task, layer), layer_frame in sample_encoding_frame.groupby(["sub_task", "layer"]):
             sub_task_folder = encoding_folder_structure.replace(task, f'{task}-{sub_task}')
@@ -813,7 +788,6 @@ def main(
                 f"{sub_task_folder}/layer-{layer}/output_{output_question_name}.feather")
 
         for (generation_id, layer), layer_frame in generated_encoding_frame.groupby(["generation_id", "layer"]):
-            generation_id = start_generation_id + generation_id
             layer_frame["generation_id"] = generation_id
             os.makedirs(f"{encoding_folder_structure}/layer-{layer}", exist_ok=True)
             relevant_columns = [col for col in layer_frame.columns if "__" not in col]

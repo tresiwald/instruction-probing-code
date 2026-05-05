@@ -128,12 +128,12 @@ This repository produces two kinds of outputs:
 
 ### Behavioral Outputs
 
-Behavioral generations are stored as Feather files under `encodings/<task>/<model>/<chat_template_model>/<precision>/template-<id>/num-gens1/layer-*/generation_*_<question>.feather`.
+Behavioral generations are stored as Feather files under `encodings/<task>/<model>/<chat_template_model>/<precision>/template-<id>/layer-*/generation_*_<question>.feather`.
 
 For example:
 
 ```bash
-encodings/blimp/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/num-gens1/layer-0/generation_0_original.feather
+encodings/blimp/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/layer-0/generation_0_original.feather
 ```
 
 These files contain, among others, the following columns:
@@ -151,7 +151,7 @@ To extract behavioral predictions:
 import pandas as pd
 
 df = pd.read_feather(
-    "encodings/blimp/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/num-gens1/layer-0/generation_0_original.feather"
+    "encodings/blimp/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/layer-0/generation_0_original.feather"
 )
 
 behavior = df[["question", "answer", "generation_text", "layer", "generation_id"]]
@@ -170,7 +170,7 @@ The two retained internal files are:
 For example:
 
 ```bash
-encodings/blimp-default/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/num-gens1/layer-0/sample_original.feather
+encodings/blimp-default/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/layer-0/sample_original.feather
 ```
 
 These files contain task metadata together with the representation vector in `inputs_encoded`. Typical metadata columns include:
@@ -190,7 +190,7 @@ To extract sample-side internal representations:
 import pandas as pd
 
 df = pd.read_feather(
-    "encodings/blimp-default/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/num-gens1/layer-0/sample_original.feather"
+    "encodings/blimp-default/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/layer-0/sample_original.feather"
 )
 
 internal = df[["context", "question", "answer", "label", "layer", "inputs_encoded"]]
@@ -203,7 +203,7 @@ To extract output-side internal representations:
 import pandas as pd
 
 df = pd.read_feather(
-    "encodings/blimp-default/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/num-gens1/layer-1/output_original.feather"
+    "encodings/blimp-default/Qwen_Qwen2.5-7B-Instruct/Qwen_Qwen2.5-7B-Instruct/full/template-0/layer-1/output_original.feather"
 )
 
 output = df[["context", "question", "answer", "label", "layer", "inputs_encoded"]]

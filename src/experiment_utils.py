@@ -88,7 +88,11 @@ def get_encoding_path(
         attention_limitation_output=False, attention_limitation_question_right=False,
         attention_limitation_input_output=False, attention_limitation_instruction_output=False,
 ):
-    """Construct the output folder for one encoding configuration."""
+    """Construct the output folder for one encoding configuration.
+
+    The path intentionally omits the number of generations because this public
+    release always uses exactly one generation per example.
+    """
     task, model_name_suffix = build_task_name(
         task=task,
         skip_layers=skip_layers,
@@ -112,7 +116,6 @@ def get_encoding_path(
         chat_template_model_name.replace("/", "_"),
         model_precision,
         f"template-{template_index}",
-        f"num-gens{num_return_sequences}",
     )
 
 
